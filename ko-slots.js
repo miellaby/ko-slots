@@ -105,7 +105,7 @@ function arraySlotsExtender(target, options) {
         map[key(item)] = item;
     });
 
-    items.idMap = map;
+    items.keyMap = map;
     items.key = key;
     items.containsKey = containsKey;
     items.removeKey = removeKey;

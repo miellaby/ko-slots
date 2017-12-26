@@ -1,7 +1,7 @@
 # ko-slots
 a [knockout](http://knockoutjs.com) extender to check the content of an observable in a much more scalable way
 
-See https://jsfiddle.net/miellaby/12a649j5/
+See demo https://jsfiddle.net/miellaby/12a649j5/
 
 
 # Introduction
@@ -35,15 +35,16 @@ var enhancedArray = ko.observableArray([{id: 1, title: "ya!"}, {id: 2, title: "h
 ```
 
 ## Non-Array Observable Slots
-Non-Array Slots may help to compare two observables one to each other, as in:
+Non-Array Slots may help to compare two observables one to each other.
 ```
 var enhancedObservable = ko.observable().extend({ slot: {} });
 ```
 ...
-````
+```
 <span data-bind="css: {'selected': $root.enhancedObservable.slot($data)}"></span>
 ```
 
 # About the demo
-Reminder: https://jsfiddle.net/miellaby/12a649j5/
+https://jsfiddle.net/miellaby/12a649j5/
+
 This demo illustrates the use of the "slot" prototype extender for Knockout.js.

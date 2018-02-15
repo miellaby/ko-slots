@@ -1,11 +1,8 @@
 if (ko.isObservableArray === undefined) {
     ko.isObservableArray = function(instance) {
-        return typeof instance["remove"] === "function" &&
-            typeof instance["removeAll"] === "function" &&
-            typeof instance["destroy"] === "function" &&
-            typeof instance["destroyAll"] === "function" &&
-            typeof instance["indexOf"] === "function" &&
-            typeof instance["replace"] === "function";
+        return ko.isObservable(instance) &&
+            typeof instance["remove"] === "function" &&
+            typeof instance["push"] === "function";
     };
 }
 
